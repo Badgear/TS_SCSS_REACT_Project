@@ -9,7 +9,9 @@
     "start": "webpack serve --env port=3000",
     "build-prod": "webpack --env mode=production",
     "build-dev": "webpack --env mode=development",
-    "lint": "eslint \"**/*.{ts,tsx}\" --fix"
+    "lint": "eslint \"**/*.{ts,tsx}\" --fix",
+    "css-lint": "npx stylelint \"**/*.scss\"",
+    "css-lint-fix": "npx stylelint \"**/*.scss\" --fix"
   },
   "keywords": [],
   "author": "",
@@ -44,6 +46,8 @@
     "sass": "^1.77.6",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
+    "stylelint": "^14.5.3",
+    "stylelint-config-standard-scss": "^3.0.0",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5",
