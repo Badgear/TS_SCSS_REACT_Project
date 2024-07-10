@@ -37,6 +37,7 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     'i18next/no-literal-string': ['error', { markupOnly: true }],
     'linebreak-style': 'off',
+    'max-len': ['error', { ignoreComments: true }],
   },
   globals: {
     __IS_DEV__: true,
