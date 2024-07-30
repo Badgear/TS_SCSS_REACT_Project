@@ -2,8 +2,8 @@
 import { render, screen } from '@testing-library/react';
 import { Button } from './Button';
 
-describe('classNames', () => {
-  test('with only one param', () => {
+describe('Button', () => {
+  test('is rendering', () => {
     render(<Button>Hello</Button>);
     expect(screen.getByText('Hello')).toBeInTheDocument();
   });
