@@ -37,7 +37,7 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     'i18next/no-literal-string': ['error', { markupOnly: true }],
     'linebreak-style': 'off',
-    'max-len': ['error', { ignoreComments: true, code: 100 }],
+    'max-len': ['error', { ignoreComments: true, code: 120 }],
     'object-curly-newline': 'off',
   },
   globals: {
