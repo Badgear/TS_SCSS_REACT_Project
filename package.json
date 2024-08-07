@@ -1,19 +1,19 @@
 {
-  "name": "react-ulbi",
+  "name": "production-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config ./config/jest/jest.config.ts",
-    "build": "webpack",
     "start": "webpack serve --env port=3000",
-    "build-prod": "webpack --env mode=production",
-    "build-dev": "webpack --env mode=development",
-    "lint": "eslint \"**/*.{ts,tsx}\" --fix",
-    "css-lint": "npx stylelint \"**/*.scss\"",
-    "css-lint-fix": "npx stylelint \"**/*.scss\" --fix",
-    "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "build-storybook": "storybook build -c ./config/storybook"
+    "build-prod": "webpack  --env mode=production",
+    "build-dev": "webpack  --env mode=development",
+    "lint-ts": "eslint \"**/*.{ts,tsx}\"",
+    "lint-ts-fix": "eslint \"**/*.{ts,tsx}\" --fix",
+    "lint-scss": "npx stylelint \"**/*.scss\"",
+    "lint-scss-fix": "npx stylelint \"**/*.scss\" --fix",
+    "unit": "jest --config ./config/jest/jest.config.ts",
+    "storybook": "start-storybook -p 6006 -c ./config/storybook",
+    "build-storybook": "build-storybook -c ./config/storybook"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +23,6 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
@@ -55,26 +54,24 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.2",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-storybook": "^0.8.0",
     "file-loader": "^6.2.0",
-    "globals": "^15.8.0",
     "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
+    "loki": "^0.28.1",
     "mini-css-extract-plugin": "^2.5.3",
     "regenerator-runtime": "^0.13.9",
-    "sass": "^1.77.6",
+    "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
-    "storybook": "^8.2.6",
     "style-loader": "^3.3.1",
     "stylelint": "^14.5.3",
     "stylelint-config-standard-scss": "^3.0.0",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5",
-    "webpack": "^5.92.1",
+    "webpack": "^5.69.1",
     "webpack-bundle-analyzer": "^4.5.0",
-    "webpack-cli": "^4.10.0",
+    "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
@@ -85,5 +82,18 @@
     "react-dom": "^17.0.2",
     "react-i18next": "^11.15.5",
     "react-router-dom": "^6.2.1"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.docker",
+        "width": 1366,
+        "height": 768
+      },
+      "chrome.iphone7": {
+        "target": "chrome.docker",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }
