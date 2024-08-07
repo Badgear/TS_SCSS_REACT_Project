@@ -1,7 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack from 'webpack';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions, } from './types/config';
 
 export function buildPlugins({
@@ -13,7 +13,7 @@ export function buildPlugins({
       template: paths.html,
     },),
     new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin( {
+    new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash:8].css',
       chunkFilename: 'css/[name].[contenthash:8].css',
     },),
@@ -21,8 +21,8 @@ export function buildPlugins({
       __IS_DEV__: JSON.stringify(isDev,),
     },),
     new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin (
-        { openAnalyzer: false }
-        )
+    new BundleAnalyzerPlugin(
+      { openAnalyzer: false }
+    )
   ];
 }
