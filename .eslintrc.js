@@ -37,6 +37,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'object-curly-newline': 'off',
     'i18next/no-literal-string': 'off',
+    'comma-dangle': 'off',
     'max-len': ['error', { ignoreComments: true, code: 150 }],
   },
   globals: {
