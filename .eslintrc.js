@@ -39,6 +39,7 @@ module.exports = {
     'i18next/no-literal-string': 'off',
     'comma-dangle': 'off',
     'max-len': ['error', { ignoreComments: true, code: 150 }],
+    'wrap-iife': 'off',
   },
   globals: {
     __IS_DEV__: true,
