@@ -18,6 +18,33 @@
   margin-left: 20px;
 }
 
+.collapseButton {
+  position: absolute;
+  right: -32px;
+  bottom: 32px;
+}
+
+.links {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.linkWrapper {
+  margin-top: 10px;
+  align-items: center;
+  display: flex;
+}
+
+.link {
+  margin-left: 10px;
+}
+
+.icon {
+  fill: var(--inverted-primary-color);
+}
+
 .collapsed {
   width: var(--sidebar-width-collapsed);
 
@@ -29,10 +56,10 @@
   .lang {
     margin: 0;
   }
-}
 
-.collapseButton {
-  position: absolute;
-  right: -32px;
-  bottom: 32px;
+  .link {
+    opacity: 0;
+    transition: 0.2s opacity;
+    width: 0;
+  }
 }
